@@ -29,6 +29,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.3
   get: ^3.11.1
+  assets_audio_player: ^2.0.10
 
 dev_dependencies:
   flutter_test:
@@ -49,6 +50,13 @@ flutter:
   assets:
     - assets/images/logo.png
     - assets/images/scorpion.png
+    - assets/images/ermac.png
+    - assets/images/jade.png
+    - assets/images/kitana.png
+    - assets/images/raiden.png
+    - assets/images/mileena.png
+    - assets/images/reptile.png
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -14,18 +14,20 @@ final List<Character> DUMMY_DATA = [
       Colors.amberAccent[400],
       Colors.amber[600]
     ],
+    mp3: '../assets/sounds/scorpion.mp3',
   ),
   Character(
-    name: 'Sub-Zero',
+    name: 'Raiden',
     about:
-        'Sub-Zero é o nome de um dos personagens mais famosos da franquia de jogos Mortal Kombat. O nome Sub-Zero é um título de conquista , conquistado por dois personagens da série, Bi Han , o primeiro Sub-Zero e Kuai Liang, que se mantem atual. É o atual Grandmaster do clã de assassinos Lin Kuei, que antes era comandado por Sektor.',
-    image: '../assets/images/subzero.png',
+        'Com frequência ele lidera as forças do bem contra o mal e tem um papel essencial na história e nos jogos da série.Tem muitas habilidades como teletransporte,controlar raios,e usa um bastão Staff como arma.O seu corpo é mortal,porém é imortal.',
+    image: '../assets/images/raiden.png',
     color: Colors.blue,
     gradientColor: [
       Colors.blue,
       Colors.blue[600],
       Colors.blue[900],
     ],
+    mp3: '../assets/sounds/scorpion.mp3',
   ),
   Character(
     name: 'Reptile',
@@ -38,18 +40,7 @@ final List<Character> DUMMY_DATA = [
       Colors.green[600],
       Colors.green[900],
     ],
-  ),
-  Character(
-    name: 'Kotal Kahn',
-    about:
-        'Kotal Kahn é um personagem da franquia de jogos Mortal Kombat.Ele é um novo lutador introduzido em Mortal Kombat X.Se tornou o novo imperador de Outworld após ter deposto Mileena do trono.É também considerado o deus do sol.',
-    image: '../assets/images/kotal.png',
-    color: Colors.orange,
-    gradientColor: [
-      Colors.orange,
-      Colors.orange[600],
-      Colors.orange[900],
-    ],
+    mp3: '../assets/sounds/scorpion.mp3',
   ),
   Character(
     name: 'Ermac',
@@ -62,6 +53,7 @@ final List<Character> DUMMY_DATA = [
       Colors.red[800],
       Colors.red[900],
     ],
+    mp3: '../assets/sounds/scorpion.mp3',
   ),
   Character(
     name: 'Kitana',
@@ -74,6 +66,7 @@ final List<Character> DUMMY_DATA = [
       Colors.indigo[800],
       Colors.indigo[900],
     ],
+    mp3: '../assets/sounds/scorpion.mp3',
   ),
   Character(
     name: 'Jade',
@@ -86,6 +79,7 @@ final List<Character> DUMMY_DATA = [
       Colors.lightGreen[800],
       Colors.lightGreen[900],
     ],
+    mp3: '../assets/sounds/scorpion.mp3',
   ),
   Character(
     name: 'Mileena',
@@ -98,5 +92,6 @@ final List<Character> DUMMY_DATA = [
       Colors.purpleAccent[400],
       Colors.purpleAccent[700],
     ],
+    mp3: '../assets/sounds/scorpion.mp3',
   ),
 ];

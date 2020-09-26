@@ -1,3 +1,4 @@
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mortal_kombat/controller/character_controller.dart';
@@ -8,6 +9,7 @@ import 'package:mortal_kombat/widgets/iten_listview.dart';
 class HomePage extends StatelessWidget {
   final List<Character> itens = DUMMY_DATA;
   final characterController = Get.put(CharacterController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

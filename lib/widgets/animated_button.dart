@@ -10,6 +10,7 @@ class AnimatedButton extends StatefulWidget {
     @required this.colors,
     @required this.gradientColor,
   });
+
   @override
   _AnimatedButtonState createState() => _AnimatedButtonState();
 }
@@ -22,7 +23,7 @@ class _AnimatedButtonState extends State<AnimatedButton>
   @override
   void initState() {
     _glowAnimationController =
-        AnimationController(vsync: this, duration: Duration(seconds: 1));
+        AnimationController(vsync: this, duration: Duration(seconds: 2));
     _glowAnimationController.repeat(reverse: true);
     _glowAnimation =
         Tween(begin: 5.0, end: 25.0).animate(_glowAnimationController)
@@ -36,7 +37,9 @@ class _AnimatedButtonState extends State<AnimatedButton>
   Widget build(BuildContext context) {
     return FlatButton(
       onPressed: widget.clickButton,
-      child: Container(
+      child: AnimatedContainer(
+        duration: Duration(seconds: 1),
+        curve: Curves.easeOutSine,
         width: 180,
         height: 50,
         child: Row(

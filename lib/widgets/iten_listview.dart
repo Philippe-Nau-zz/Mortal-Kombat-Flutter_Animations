@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mortal_kombat/controller/character_controller.dart';
 import 'package:mortal_kombat/widgets/animated_button.dart';
+import 'package:mortal_kombat/widgets/container_animated.dart';
 
 class ItemPage extends StatelessWidget {
   final String name;
@@ -25,19 +26,7 @@ class ItemPage extends StatelessWidget {
       init: CharacterController(),
       builder: (characterController) => Stack(
         children: [
-          Transform(
-            transform: Matrix4.skewX(-0.95),
-            child: Container(
-              width: MediaQuery.of(context).size.width * 0.8,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: this.gradientColor,
-                ),
-              ),
-            ),
-          ),
+          ContainerAnimated(this.gradientColor),
           Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,

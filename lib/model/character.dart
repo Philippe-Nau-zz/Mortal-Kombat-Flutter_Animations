@@ -6,6 +6,7 @@ class Character {
   final String image;
   final List<Color> gradientColor;
   final Color color;
+  final String mp3;
 
   Character({
     @required this.name,
@@ -13,5 +14,6 @@ class Character {
     @required this.image,
     @required this.color,
     @required this.gradientColor,
+    @required this.mp3,
   });
 }
