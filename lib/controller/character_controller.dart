@@ -11,7 +11,8 @@ class CharacterController extends GetxController {
   double _matrixY = 0;
   double get matrixY => _matrixY;
 
-  onInit() {
+  @override
+  void onInit() {
     super.onInit();
     changeMatrix();
   }

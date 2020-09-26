@@ -23,7 +23,7 @@ class _AnimatedButtonState extends State<AnimatedButton>
   @override
   void initState() {
     _glowAnimationController =
-        AnimationController(vsync: this, duration: Duration(seconds: 2));
+        AnimationController(vsync: this, duration: Duration(seconds: 1));
     _glowAnimationController.repeat(reverse: true);
     _glowAnimation =
         Tween(begin: 5.0, end: 25.0).animate(_glowAnimationController)

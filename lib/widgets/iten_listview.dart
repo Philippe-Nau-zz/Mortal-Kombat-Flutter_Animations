@@ -42,13 +42,15 @@ class ItemPage extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
+                          AnimatedContainer(
+                            duration: Duration(seconds: 6),
+                            curve: Curves.linearToEaseOut,
                             width: 900,
                             height: 3,
                             decoration: BoxDecoration(
                               gradient: LinearGradient(
-                                begin: Alignment.centerLeft,
-                                end: Alignment.centerRight,
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
                                 colors: this.gradientColor,
                               ),
                             ),

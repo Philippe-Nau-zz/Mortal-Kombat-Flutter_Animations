@@ -11,8 +11,8 @@ class ContainerAnimated extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedContainer(
       transform: Matrix4.skew(matrix.matrixX, matrix.matrixY),
-      duration: Duration(seconds: 2),
-      curve: Curves.easeInToLinear,
+      duration: Duration(seconds: 6),
+      curve: Curves.linearToEaseOut,
       width: MediaQuery.of(context).size.width * 0.6,
       decoration: BoxDecoration(
         gradient: LinearGradient(
