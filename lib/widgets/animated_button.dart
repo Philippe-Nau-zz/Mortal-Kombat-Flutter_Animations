@@ -34,6 +34,12 @@ class _AnimatedButtonState extends State<AnimatedButton>
   }
 
   @override
+  void dispose() {
+    _glowAnimationController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return FlatButton(
       onPressed: widget.clickButton,

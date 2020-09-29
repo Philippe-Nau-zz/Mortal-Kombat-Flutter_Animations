@@ -19,6 +19,9 @@ class CharacterController extends GetxController {
   double _opacity = 0;
   double get opacity => _opacity;
 
+  bool _isLast = false;
+  bool get last => _isLast;
+
   @override
   void onReady() {
     super.onReady();
@@ -27,8 +30,8 @@ class CharacterController extends GetxController {
     changeOpacity();
   }
 
-  changeCharacter(int itenCount) {
-    if (index == itenCount - 1) {
+  changeCharacter(List itens) {
+    if (index == itens.length - 1) {
       _index = 0;
     } else {
       _index++;

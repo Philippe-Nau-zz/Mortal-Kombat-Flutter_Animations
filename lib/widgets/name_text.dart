@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/instance_manager.dart';
+import 'package:get/get.dart';
 import 'package:mortal_kombat/controller/character_controller.dart';
 
 class NameText extends StatelessWidget {
@@ -14,13 +14,13 @@ class NameText extends StatelessWidget {
     @required this.fontColor,
   });
 
-  final opacityGetx = Get.put(CharacterController());
+  final opacityController = Get.put(CharacterController());
 
   @override
   Widget build(BuildContext context) {
     return AnimatedOpacity(
       duration: Duration(seconds: 2),
-      opacity: opacityGetx.opacity,
+      opacity: opacityController.opacity,
       curve: Curves.easeInCubic,
       child: FittedBox(
         child: Text(

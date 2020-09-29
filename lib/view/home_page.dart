@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
               color: Colors.grey[900],
               child: ItemPage(
                 clickButton: () {
-                  characterController.changeCharacter(itens.length);
+                  characterController.changeCharacter(itens);
                 },
                 name: itens[characterController.index].name,
                 about: itens[characterController.index].about,

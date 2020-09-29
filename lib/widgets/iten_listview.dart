@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:mortal_kombat/controller/character_controller.dart';
 import 'package:mortal_kombat/widgets/animated_button.dart';
 import 'package:mortal_kombat/widgets/container_animated.dart';
+import 'package:mortal_kombat/widgets/finish_button.dart';
 import 'package:mortal_kombat/widgets/name_text.dart';
 
 class ItemPage extends StatelessWidget {
@@ -162,6 +163,7 @@ class ItemPage extends StatelessWidget {
                           colors: this.color,
                           gradientColor: this.gradientColor,
                         ),
+                        FinishButton(),
                       ],
                     ),
                   ),
