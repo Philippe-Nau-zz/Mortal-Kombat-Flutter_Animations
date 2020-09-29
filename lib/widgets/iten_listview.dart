@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:mortal_kombat/controller/character_controller.dart';
 import 'package:mortal_kombat/widgets/animated_button.dart';
 import 'package:mortal_kombat/widgets/container_animated.dart';
+import 'package:mortal_kombat/widgets/name_text.dart';
 
 class ItemPage extends StatelessWidget {
   final String name;
@@ -55,18 +56,16 @@ class ItemPage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          Align(
-                            alignment: Alignment(-1.4, -0.5),
+                          AnimatedAlign(
+                            duration: Duration(seconds: 12),
+                            alignment:
+                                Alignment(characterController.positioned, 0),
                             child: Container(
-                              child: FittedBox(
-                                child: Text(
-                                  this.name,
-                                  style: TextStyle(
-                                    fontSize: 150,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.grey[900].withOpacity(0.3),
-                                  ),
-                                ),
+                              child: NameText(
+                                name: this.name,
+                                opacity: 0.3,
+                                fontSize: 120,
+                                fontColor: Colors.grey[900],
                               ),
                             ),
                           ),
@@ -83,10 +82,17 @@ class ItemPage extends StatelessWidget {
                   padding: const EdgeInsets.all(20),
                   child: Align(
                     alignment: Alignment(-0.7, -0.40),
-                    child: Text(
-                      'FIGHTER',
+                    child: AnimatedDefaultTextStyle(
+                      duration: Duration(seconds: 1),
+                      curve: Curves.decelerate,
+                      child: Text(
+                        'FIGHTER',
+                      ),
                       style: TextStyle(
-                          letterSpacing: 10, fontSize: 22, color: this.color),
+                        letterSpacing: 10,
+                        fontSize: 22,
+                        color: this.color,
+                      ),
                     ),
                   ),
                 ),
@@ -95,36 +101,29 @@ class ItemPage extends StatelessWidget {
                   child: Container(
                     width: 800,
                     height: 800,
-                    child: Image.asset(
-                      this.image,
-                      alignment: Alignment.bottomRight,
-                      fit: BoxFit.scaleDown,
+                    child: AnimatedOpacity(
+                      duration: Duration(seconds: 2),
+                      curve: Curves.easeInQuart,
+                      opacity: characterController.opacity,
+                      child: Image.asset(
+                        this.image,
+                        alignment: Alignment.bottomRight,
+                        fit: BoxFit.scaleDown,
+                      ),
                     ),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Align(
-                    alignment: Alignment(-0.7, -0.20),
-                    child: FittedBox(
-                      child: Text(
-                        this.name,
-                        style: TextStyle(
-                          fontSize: 120,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          shadows: [
-                            Shadow(
-                              color: Colors.black54,
-                              blurRadius: 10,
-                            ),
-                            Shadow(
-                              color: Colors.white,
-                              blurRadius: 2,
-                            )
-                          ],
-                        ),
-                      ),
+                  child: AnimatedAlign(
+                    duration: Duration(seconds: 12),
+                    onEnd: () => characterController.moveContainer(),
+                    alignment: Alignment(characterController.positioned1, -0.2),
+                    child: NameText(
+                      name: this.name,
+                      opacity: 1,
+                      fontSize: 120,
+                      fontColor: Colors.white,
                     ),
                   ),
                 ),
@@ -135,11 +134,16 @@ class ItemPage extends StatelessWidget {
                     child: Container(
                       width: 500,
                       height: 300,
-                      child: Text(
-                        this.about,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
+                      child: AnimatedOpacity(
+                        duration: Duration(seconds: 1),
+                        curve: Curves.easeInQuad,
+                        opacity: characterController.opacity,
+                        child: Text(
+                          this.about,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                          ),
                         ),
                       ),
                     ),
